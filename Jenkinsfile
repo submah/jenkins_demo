@@ -2,7 +2,7 @@ pipeline{
   agent any
     stages{
     stage('Cloning Repository'){
-        git 'https://github.com/submah/maven-jenkins-job.git'
+        git changelog: false, poll: false, url: 'https://github.com/submah/maven-jenkins-job.git'
     }
     stage('Maven Package Build'){
         sh 'mvn clean package'
