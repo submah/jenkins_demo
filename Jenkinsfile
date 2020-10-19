@@ -1,5 +1,5 @@
 pipeline{
-  agent { label 'master'}
+  agent { label 'maven_demo'}
     stages{
     stage('Cloning Repository'){
         git changelog: false, poll: false, url: 'https://github.com/submah/maven-jenkins-job.git'
